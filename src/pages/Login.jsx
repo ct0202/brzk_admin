@@ -79,7 +79,7 @@ const Login = () => {
               margin="normal"
               required
               autoFocus
-              placeholder="admin@buziak.online"
+              placeholder="user@gmail.com"
             />
 
             <TextField
@@ -90,7 +90,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               margin="normal"
               required
-              placeholder="admin123"
+              placeholder="1234567890"
             />
 
             <Button
