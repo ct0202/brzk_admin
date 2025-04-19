@@ -4,7 +4,7 @@ const userService = {
   // Получение списка пользователей для верификации
   getVerificationUsers: async (page = 1, limit = 10) => {
     try {
-      const response = await api.get('/users/verification', {
+      const response = await api.get('/admin/users/verification', {
         params: {
           page,
           limit,
@@ -23,7 +23,7 @@ const userService = {
   // Одобрение верификации пользователя
   approveVerification: async (userId) => {
     try {
-      const response = await api.post(`/users/${userId}/verify`, {
+      const response = await api.post(`/admin/users/${userId}/verify`, {
         verified: true,
       });
       return response.data;
@@ -36,7 +36,7 @@ const userService = {
   // Отклонение верификации пользователя
   rejectVerification: async (userId) => {
     try {
-      const response = await api.post(`/users/${userId}/verify`, {
+      const response = await api.post(`/admin/users/${userId}/verify`, {
         verified: false,
       });
       return response.data;
@@ -49,7 +49,7 @@ const userService = {
   // Получение детальной информации о пользователе
   getUserDetails: async (userId) => {
     try {
-      const response = await api.get(`/users/${userId}`);
+      const response = await api.get(`/admin/users/${userId}`);
       return response.data;
     } catch (error) {
       console.error('Ошибка при получении информации о пользователе:', error);
