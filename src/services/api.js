@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   // baseURL: 'http://localhost:5002/api/admin',
-  baseURL: 'https://api.buziak.online/api/admin',
+  baseURL: 'https://api.buziak.online',
   headers: {
     'Content-Type': 'application/json',
   },
